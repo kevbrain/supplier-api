@@ -1,0 +1,9 @@
+apiVersion: triggers.tekton.dev/v1alpha1
+kind: EventListener
+metadata:
+  name: supplier-api-dev-eventlistener
+  namespace: supplier-api-dev
+spec:
+  serviceAccountName: pipeline
+  triggers:
+    - triggerRef: supplier-api-dev-trigger

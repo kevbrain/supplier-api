@@ -1,0 +1,11 @@
+apiVersion: triggers.tekton.dev/v1alpha1
+kind: Trigger
+metadata:
+  name: supplier-api-dev-trigger
+  namespace: supplier-api-dev
+spec:
+  serviceAccountName: pipeline
+  bindings:
+    - ref: supplier-api-dev-triggerbinding
+  template:
+    ref: supplier-api-dev-triggertemplate

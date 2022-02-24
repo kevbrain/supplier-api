@@ -1,0 +1,12 @@
+kind: Secret
+apiVersion: v1
+metadata:
+  namespace: {{ocp-namespace}}
+  name: supplier-api-secret-0
+  labels:
+    app: supplier-api    
+stringData:  
+  actuator.password: {{actuator.password}}
+type: Opaque
+---
+ 
